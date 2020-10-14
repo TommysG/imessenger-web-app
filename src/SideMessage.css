@@ -1,0 +1,33 @@
+.message {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.message:hover {
+  background-color: rgb(90, 90, 207);
+  color: #e0e0e0;
+}
+
+.message:hover > .message__info > small {
+  color: #e0e0e0;
+}
+
+.message__avatar .MuiAvatarGroup-avatar {
+  border: none;
+}
+
+.message__info {
+  position: relative;
+  margin-left: 15px;
+  width: 100%;
+}
+
+.message__info > small {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  color: #323232;
+}

@@ -1,0 +1,20 @@
+.search__user {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.userlist {
+  overflow: scroll;
+  height: 200px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.userlist::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.userlist {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

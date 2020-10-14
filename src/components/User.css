@@ -1,0 +1,26 @@
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.selected {
+  background-color: rgb(122, 122, 235);
+  color: white;
+}
+
+.user:hover {
+  background-color: rgb(122, 122, 235);
+  color: white;
+}
+
+.user__name {
+  margin-left: 15px;
+}

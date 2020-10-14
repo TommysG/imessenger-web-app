@@ -1,0 +1,82 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 0.65;
+  height: 100vh;
+  background-color: white;
+}
+
+.chat__header {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  background-color: #f3f3f3;
+}
+
+.chat__header > strong {
+  color: rgb(122, 122, 235);
+  cursor: pointer;
+}
+
+.chat__user {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.chat__user .MuiAvatarGroup-avatar {
+  border: none;
+}
+
+.chat__user > h4 {
+  margin-left: 10px;
+  color: #323232;
+}
+
+.chat__input {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid lightgray;
+  background-color: #f3f3f3;
+}
+
+.chat__input > form {
+  flex: 1;
+}
+
+.chat__input > form > input {
+  width: 98%;
+  outline-width: 0;
+  border: 1px solid lightgray;
+  border-radius: 999px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  padding: 10px 15px;
+}
+
+.chat__input > form > .send {
+  display: none;
+}
+
+.chat__messages {
+  flex: 1;
+  padding: 5px 20px;
+  overflow: scroll;
+  position: relative;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.chat__messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.chat__messages {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

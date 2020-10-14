@@ -1,0 +1,59 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 0.35;
+  border-right: 1px solid lightgray;
+  background-color: #f3f3f3;
+}
+
+.sidebar__header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+}
+
+.sidebar__avatar {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.sidebar__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: rgb(95, 95, 95);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  color: whitesmoke;
+  padding: 2px 15px;
+}
+
+.sidebar__input > input {
+  background: transparent;
+  border: none;
+  outline-width: 0;
+  color: whitesmoke;
+  flex: 1;
+}
+
+.sidebar__messages {
+  overflow: scroll;
+  position: relative;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar__messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar__messages {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
