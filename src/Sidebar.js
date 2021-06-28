@@ -4,13 +4,14 @@ import SideMessage from "./SideMessage";
 import { Avatar, IconButton } from "@material-ui/core";
 import { Search } from "@material-ui/icons";
 import MessageIcon from "@material-ui/icons/Message";
+import CloseIcon from "@material-ui/icons/Close";
 import { selectUser } from "./features/userSlice";
 import { useSelector } from "react-redux";
 import db, { auth } from "./firebase";
 import NewMessageDialog from "./NewMessageDialog";
 import FlipMove from "react-flip-move";
 
-function Sidebar() {
+function Sidebar({ close, side }) {
   const user = useSelector(selectUser);
   const [open, setOpen] = React.useState(false);
   const [rooms, setRooms] = React.useState([]);
@@ -60,7 +61,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="sidebar">
+    <div className={side ? `sidebar close` : `sidebar open`}>
       <div className="sidebar__header">
         <Avatar
           onClick={() => auth.signOut()}
@@ -79,6 +80,10 @@ function Sidebar() {
 
         <IconButton onClick={() => setOpen(!open)}>
           <MessageIcon />
+        </IconButton>
+
+        <IconButton onClick={close} className="sidebar__btn">
+          <CloseIcon />
         </IconButton>
       </div>
 
@@ -113,6 +118,7 @@ function Sidebar() {
                   chatName={handleChatName(room)}
                   photo={handleChatPhoto(room)}
                   members={room.data.ids}
+                  close={close}
                 />
               );
             })}

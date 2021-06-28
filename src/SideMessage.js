@@ -7,7 +7,7 @@ import "./SideMessage.css";
 import * as timeago from "timeago.js";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 
-const Message = forwardRef(({ id, chatName, photo, members }, ref) => {
+const Message = forwardRef(({ id, chatName, photo, members, close }, ref) => {
   const dispatch = useDispatch();
   const [chatInfo, setChatInfo] = React.useState([]);
 
@@ -34,6 +34,8 @@ const Message = forwardRef(({ id, chatName, photo, members }, ref) => {
             chatMembers: members,
           })
         );
+
+        close();
       }}
     >
       <div className="message__avatar">

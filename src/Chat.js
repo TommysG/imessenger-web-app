@@ -16,8 +16,9 @@ import Message from "./components/Message";
 import FlipMove from "react-flip-move";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import AddMember from "./AddMember";
+import MenuIcon from "@material-ui/icons/Menu";
 
-function Chat() {
+function Chat({ expand }) {
   const chatName = useSelector(selectChatName);
   const chatId = useSelector(selectChatId);
   const chatPhoto = useSelector(selectChatPhoto);
@@ -76,6 +77,10 @@ function Chat() {
     <div className="chat">
       <div className="chat__header">
         <div className="chat__user">
+          <IconButton onClick={expand} className="sidebar__btn">
+            <MenuIcon />
+          </IconButton>
+
           <AvatarGroup>
             {chatPhoto?.map((photo, index) => {
               return <Avatar key={index} src={photo} />;

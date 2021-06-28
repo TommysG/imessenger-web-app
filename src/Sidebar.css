@@ -32,6 +32,7 @@
   -o-border-radius: 15px;
   color: whitesmoke;
   padding: 2px 15px;
+  min-width: 80px;
 }
 
 .sidebar__input > input {
@@ -40,6 +41,7 @@
   outline-width: 0;
   color: whitesmoke;
   flex: 1;
+  min-width: 80px;
 }
 
 .sidebar__messages {
@@ -56,4 +58,44 @@
 .sidebar__messages {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+.sidebar__btn {
+  display: none !important;
+}
+
+/* .open {
+  transform: translateX(0);
+}
+
+.close {
+  transform: translateX(-100%);
+} */
+
+@media only screen and (max-width: 950px) {
+  .sidebar__btn {
+    display: block !important;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 1s all ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    z-index: 20;
+  }
+
+  .chat {
+    flex: 1 !important;
+  }
+
+  .open {
+    transform: translateX(0);
+  }
+
+  .close {
+    transform: translateX(-100%);
+  }
 }
